@@ -1,3 +1,6 @@
+from customers.filters import filter_customers_by_city as filter_by_city
+from customers.location_tracker import get_unique_locations as track_locations
+
 class CustomerManager:
     def __init__(self, customers):
         self.customers = customers
@@ -9,8 +12,8 @@ class CustomerManager:
 
     def filter_customers_by_city(self, city):
         """Placeholder for filtering customers (students will implement)."""
-        print(f"\nFiltering customers in {city} is not yet implemented.")
+        return filter_by_city(self.customers, city)
 
     def get_unique_locations(self):
         """Placeholder for retrieving unique locations (students will implement)."""
-        print("\nUnique locations tracking is not yet implemented.")
+        return track_locations(self.customers)
